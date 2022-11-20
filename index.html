@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Bulma 模板</title>
+  <meta name="theme-color" content="#ffffff"/>
+  <link rel="stylesheet" href="/public/bulma.min.css">
+  <link rel="stylesheet" href="/public/main.css">
+  <script src="/public/main.js"></script>
+</head>
+<body>
+
+<div>
+  <nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5" href="/" style="font-weight: bold">
+          Bulma 模板
+        </a>
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+           data-target="mainNavbar">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/"> 首页 </a>
+          <a class="navbar-item" target="_blank"
+             href="https://github.com/songquanpeng/bulma-template/blob/master/README.md"> 帮助 </a>
+          <a class="navbar-item" target="_blank" href="https://iamazing.cn/page/bulma-template"> 关于 </a>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <a class="button is-light" target="_blank" href="https://github.com/songquanpeng/bulma-template">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+  <div class="container">
+    <div class="normal-container">
+      <article class="message is-light">
+        <div class="message-header">
+          <p>标题</p>
+        </div>
+        <div class="message-body">
+          内容
+        </div>
+      </article>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                标题
+              </p>
+            </header>
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="https://github-readme-stats.vercel.app/api?username=songquanpeng&show_icons=true&hide_border=true" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                描述
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                标题
+              </p>
+            </header>
+            <div class="card-image">
+              <figure class="image is-5by3">
+                <img src="https://github-readme-stats.vercel.app/api?username=songquanpeng&show_icons=true&hide_border=true" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                描述
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer" style="background-color: white">
+    <div class="content has-text-centered">
+      <p>
+        <a href="https://github.com/songquanpeng/bulma-template">Bulma 模板</a> 由 <a href="https://github.com/songquanpeng">JustSong</a>
+        构建，源代码遵循
+        <a href="https://opensource.org/licenses/mit-license.php">MIT</a> 协议
+      </p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
+
