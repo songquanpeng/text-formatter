@@ -63,11 +63,11 @@ code {
 }
 
 .shadow {
-    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .02);
 }
 
 .nav-shadow {
-    box-shadow: 0 2px 3px rgba(26,26,26,.1);
+    box-shadow: 0 2px 3px rgba(26, 26, 26, .1);
 }
 
 .box .article {
@@ -146,6 +146,7 @@ img {
 .article h5 {
     font-size: 1.1em;
 }
+
 .article h6 {
     font-size: 1em;
     font-weight: bold
@@ -215,7 +216,7 @@ img {
     padding: .065em .4em;
 }
 
-.article .copyright{
+.article .copyright {
     display: none;
 }
 
@@ -248,7 +249,7 @@ span.line {
 
 #editor {
     width: 100%;
-    min-height: 500px;
+    min-height: 450px;
     margin-top: 16px;
 }
 

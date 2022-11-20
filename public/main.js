@@ -68,6 +68,10 @@ function onPaste(event) {
   if (setting['useFullWidthPunctuationMarks']) {
     data = useFullWidthPunctuationMarks(data);
   }
+  // Decode URL
+  data = data.replaceAll(/(www|http:|https:)+([^\s]+)/g, x => {
+    return decodeURI(x);
+  });
   event.target.value = data;
   if (setting['autoCopy']) {
     copy();
