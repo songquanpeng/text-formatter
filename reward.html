@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang='zh'>
+<head>
+  <meta charset='UTF-8' />
+  <meta content='width=device-width, initial-scale=1' name='viewport' />
+  <title>支持本项目</title>
+  <meta content='支持 JustSong' name='description'>
+  <meta content='#ffffff' name='theme-color' />
+  <link href='/public/bulma.min.css' rel='stylesheet'>
+  <link href='/public/main.css' rel='stylesheet'>
+  <script src='/public/main.js'></script>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-Z59F6RQ9KG'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z59F6RQ9KG');
+</script>
+<body>
+<div>
+  <nav aria-label='main navigation' class='navbar nav-shadow' role='navigation'>
+    <div class='container'>
+      <div class='navbar-brand'>
+        <a class='navbar-item is-size-5' href='./' style='font-weight: bold'>
+          文本格式化工具
+        </a>
+        <a aria-expanded='false' aria-label='menu' class='navbar-burger burger' data-target='mainNavbar'
+           role='button'>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+        </a>
+      </div>
+      <div class='navbar-menu' id='mainNavbar'>
+        <div class='navbar-start'>
+          <a class='navbar-item' target='_blank' href='https://github.com/songquanpeng/text-formatter'> 源码 </a>
+          <a class='navbar-item' target='_blank' href='https://github.com/songquanpeng/text-formatter/issues/new'>
+            反馈 </a>
+          <a class='navbar-item' target='_blank' href='https://iamazing.cn/page/text-formatter'> 帮助 </a>
+          <a class='navbar-item' href='./reward.html'> 赞赏 </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+  <div class='container'>
+    <div class='normal-container'>
+      <div class='card'>
+        <header class='card-header'>
+          <p class='card-header-title'>
+            支持本项目
+          </p>
+        </header>
+        <div class='card-content'>
+          <div class='content'>
+            <div class='columns'>
+              <div class='column'>
+                如果本工具对你有价值，或许可以考虑赞赏一杯咖啡，这会让维护者很开心：
+                <div style='max-width: 400px; margin: auto'>
+                  <img alt='微信赞赏码' src='https://iamazing.cn/upload/b216b150-6711-11ed-8c05-35d35a34c6d4.png'
+                       style='max-width: 100%;'>
+                </div>
+                <br />
+                后续将在此自动渲染赞赏者名单，敬请期待！
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class='footer' style='background-color: white'>
+  <div class='content has-text-centered'>
+    <p>
+      <a href='https://github.com/songquanpeng/text-formatter'>文本格式化工具</a> 由 <a href='https://github.com/songquanpeng'>JustSong</a>
+      构建，源代码遵循
+      <a href='https://opensource.org/licenses/mit-license.php'>MIT</a> 协议
+    </p>
+  </div>
+</footer>
+</body>
+</html>
+

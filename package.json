@@ -1,0 +1,25 @@
+{
+  "name": "text-cleaner",
+  "version": "0.1.0",
+  "description": "功能丰富的在线文本清理工具，可用于 PDF、PPT、CAJ 等文字复制格式化，去除多余的空格与换行",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/songquanpeng/text-cleaner.git"
+  },
+  "author": "JustSong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/songquanpeng/text-cleaner/issues"
+  },
+  "homepage": "https://github.com/songquanpeng/text-cleaner#readme",
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}

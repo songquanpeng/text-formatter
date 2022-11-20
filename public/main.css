@@ -92,7 +92,7 @@ img {
     overflow-wrap: break-word;
     word-break: break-word;
     line-height: 1.6;
-    font-size: larger;
+    /*font-size: larger;*/
 }
 
 .narrow-container {
@@ -243,4 +243,15 @@ span.line {
 .toc {
     position: sticky;
     top: 24px;
+}
+
+
+#editor {
+    width: 100%;
+    min-height: 500px;
+    margin-top: 16px;
+}
+
+label.checkbox {
+    margin-right: 4px;
 }

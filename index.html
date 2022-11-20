@@ -1,43 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang='zh'>
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Bulma 模板</title>
-  <meta name="theme-color" content="#ffffff"/>
-  <link rel="stylesheet" href="/public/bulma.min.css">
-  <link rel="stylesheet" href="/public/main.css">
-  <script src="/public/main.js"></script>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>文本格式化工具</title>
+  <meta content='功能丰富的在线文本格式化工具，可用于 PDF、PPT、CAJ 等文字复制格式化，去除多余的空格与换行' name='description'>
+  <meta name='theme-color' content='#ffffff' />
+  <link rel='stylesheet' href='/public/bulma.min.css'>
+  <link rel='stylesheet' href='/public/main.css'>
+  <script src='/public/main.js'></script>
 </head>
-<body>
+<!-- Google tag (gtag.js) -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-Z59F6RQ9KG'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
 
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z59F6RQ9KG');
+</script>
+<body>
 <div>
-  <nav class="navbar nav-shadow" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <a class="navbar-item is-size-5" href="/" style="font-weight: bold">
-          Bulma 模板
+  <nav class='navbar nav-shadow' role='navigation' aria-label='main navigation'>
+    <div class='container'>
+      <div class='navbar-brand'>
+        <a class='navbar-item is-size-5' href='./' style='font-weight: bold'>
+          文本格式化工具
         </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-           data-target="mainNavbar">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+        <a role='button' class='navbar-burger burger' aria-label='menu' aria-expanded='false'
+           data-target='mainNavbar'>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
+          <span aria-hidden='true'></span>
         </a>
       </div>
-      <div id="mainNavbar" class="navbar-menu">
-        <div class="navbar-start">
-          <a class="navbar-item" href="/"> 首页 </a>
-          <a class="navbar-item" target="_blank"
-             href="https://github.com/songquanpeng/bulma-template/blob/master/README.md"> 帮助 </a>
-          <a class="navbar-item" target="_blank" href="https://iamazing.cn/page/bulma-template"> 关于 </a>
-        </div>
-        <div class="navbar-end">
-          <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-light" target="_blank" href="https://github.com/songquanpeng/bulma-template">GitHub</a>
-            </div>
-          </div>
+      <div id='mainNavbar' class='navbar-menu'>
+        <div class='navbar-start'>
+          <a class='navbar-item' target='_blank' href='https://github.com/songquanpeng/text-formatter'> 源码 </a>
+          <a class='navbar-item' target='_blank' href='https://github.com/songquanpeng/text-formatter/issues/new'>
+            反馈 </a>
+          <a class='navbar-item' target='_blank' href='https://iamazing.cn/page/text-formatter'> 帮助 </a>
+          <a class='navbar-item' href='./reward.html'> 赞赏 </a>
         </div>
       </div>
     </div>
@@ -57,64 +65,57 @@
       }
     });
   </script>
-  <div class="container">
-    <div class="normal-container">
-      <article class="message is-light">
-        <div class="message-header">
-          <p>标题</p>
-        </div>
-        <div class="message-body">
-          内容
-        </div>
-      </article>
-      <div class="columns">
-        <div class="column">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">
-                标题
-              </p>
-            </header>
-            <div class="card-image">
-              <figure class="image is-5by3">
-                <img src="https://github-readme-stats.vercel.app/api?username=songquanpeng&show_icons=true&hide_border=true" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                描述
-              </div>
-            </div>
+  <div class='container'>
+    <div class='normal-container'>
+      <div class='box'>
+        <div class='field'>
+          <div class='control'>
+            <label class='checkbox'>
+              <input type='checkbox' id='autoCopy' onclick='onCheckboxClicked("autoCopy")' checked>
+              自动复制
+            </label>
+            <label class='checkbox'>
+              <input type='checkbox' id='cleanAllLinebreaks' onclick='onCheckboxClicked("cleanAllLinebreaks")'>
+              清理所有换行
+            </label>
+            <label class='checkbox'>
+              <input type='checkbox' id='autoAddLinebreaks' onclick='onCheckboxClicked("autoAddLinebreaks")'>
+              句号自动换行
+            </label>
+            <label class='checkbox'>
+              <input type='checkbox' id='removeSpacesBetweenChinese'
+                     onclick='onCheckboxClicked("removeSpacesBetweenChinese")'>
+              清理汉字之间的空格
+            </label>
+            <label class='checkbox'>
+              <input type='checkbox' id='addSpaceBetweenChineseAndEnglish'
+                     onclick='onCheckboxClicked("addSpaceBetweenChineseAndEnglish")'>
+              中英文之间添加空格
+            </label>
+            <label class='checkbox'>
+              <input type='checkbox' id='useFullWidthPunctuationMarks'
+                     onclick='onCheckboxClicked("useFullWidthPunctuationMarks")'>
+              使用全角标点符号
+            </label>
           </div>
         </div>
-        <div class="column">
-          <div class="card">
-            <header class="card-header">
-              <p class="card-header-title">
-                标题
-              </p>
-            </header>
-            <div class="card-image">
-              <figure class="image is-5by3">
-                <img src="https://github-readme-stats.vercel.app/api?username=songquanpeng&show_icons=true&hide_border=true" alt="Placeholder image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="content">
-                描述
-              </div>
-            </div>
-          </div>
+        <div class='field'>
+          <textarea id='editor' class='textarea' placeholder='直接粘贴即可使用'></textarea>
+        </div>
+        <div class='buttons is-right '>
+          <button class='button is-success' onclick='copy()'>复制</button>
+          <button class='button is-warning' onclick='clearInput()'>清空</button>
         </div>
       </div>
     </div>
   </div>
-  <footer class="footer" style="background-color: white">
-    <div class="content has-text-centered">
+  <footer class='footer' style='background-color: white'>
+    <div class='content has-text-centered'>
       <p>
-        <a href="https://github.com/songquanpeng/bulma-template">Bulma 模板</a> 由 <a href="https://github.com/songquanpeng">JustSong</a>
+        <a href='https://github.com/songquanpeng/text-formatter'>文本格式化工具</a> 由 <a
+        href='https://github.com/songquanpeng'>JustSong</a>
         构建，源代码遵循
-        <a href="https://opensource.org/licenses/mit-license.php">MIT</a> 协议
+        <a href='https://opensource.org/licenses/mit-license.php'>MIT</a> 协议
       </p>
     </div>
   </footer>
