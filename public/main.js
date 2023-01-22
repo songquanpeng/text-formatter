@@ -68,6 +68,7 @@ function onPaste(event) {
   if (setting['useFullWidthPunctuationMarks']) {
     data = useFullWidthPunctuationMarks(data);
   }
+  data = fixWrongQuoteForEnglish(data);
   // Decode URL
   data = data.replaceAll(/(www|http:|https:)+([^\s]+)/g, x => {
     return decodeURI(x);
@@ -86,6 +87,16 @@ function addSpaceBetweenChineseAndEnglish(str) {
   let p1 = /([A-Za-z_]|[0-9])([\u4e00-\u9fa5]+)/gi;
   let p2 = /([\u4e00-\u9fa5]+)([A-Za-z_]|[0-9])/gi;
   return str.replace(p1, '$1 $2').replace(p2, '$1 $2');
+}
+
+function fixWrongQuoteForEnglish(str) {
+  let p1 = /([A-Za-z_])(’)/gi;
+  let p2 = /(\s”)([A-Za-z_])/gi;
+  let p3 = /([A-Za-z_])(”\s)/gi;
+  return str
+    .replace(p1, "$1'")
+    .replace(p2, ' "$2')
+    .replace(p3, '$1" ');
 }
 
 function removeSpacesBetweenChinese(str) {
