@@ -91,12 +91,12 @@ function addSpaceBetweenChineseAndEnglish(str) {
 
 function fixWrongQuoteForEnglish(str) {
   let p1 = /([A-Za-z_])(’)/gi;
-  let p2 = /(\s”)([A-Za-z_])/gi;
-  let p3 = /([A-Za-z_])(”\s)/gi;
+  let p2 = /([”“])([A-Za-z_])/gi;
+  let p3 = /([A-Za-z_])([”“])/gi;
   return str
     .replace(p1, "$1'")
-    .replace(p2, ' "$2')
-    .replace(p3, '$1" ');
+    .replace(p2, '"$2')
+    .replace(p3, '$1"');
 }
 
 function removeSpacesBetweenChinese(str) {
